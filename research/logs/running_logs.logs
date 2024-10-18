@@ -1,0 +1,68 @@
+[2024-10-18 12:59:02,480: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-10-18 12:59:02,482: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-10-18 13:00:30,712: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-10-18 13:00:30,714: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-10-18 13:00:30,715: INFO: common: created directory at: artifacts]
+[2024-10-18 13:00:30,716: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-10-18 13:00:44,652: INFO: 1380079971: artifacts/data_ingestion/data.zip download! with following info: 
+x-amz-id-2: khcO8hcmwWoRNPRdAPNLkDicS/PDq4Rfde1UE8TIZWEw/LVZLfbafhnErT7SoauCHdmRVRI9U09Qygkc3Gs+Vg==
+x-amz-request-id: 6FD53HP8DERJCZ4D
+Date: Fri, 18 Oct 2024 16:00:33 GMT
+Last-Modified: Fri, 18 Oct 2024 12:06:20 GMT
+ETag: "04785daacd49e7c28b32a0e2318ceae7-17"
+x-amz-server-side-encryption: AES256
+x-amz-version-id: null
+Content-Disposition: inline
+Accept-Ranges: bytes
+Content-Type: application/x-compressed
+Server: AmazonS3
+Content-Length: 278618209
+Connection: close
+
+]
+[2024-10-18 13:04:04,693: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-10-18 13:04:04,696: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-10-18 13:04:04,699: INFO: common: created directory at: artifacts]
+[2024-10-18 13:04:04,701: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-10-18 13:04:04,702: INFO: 1136638258: artifacts/data_ingestion/data.zip already exists and the size is <function get_size at 0x000001E80DAE8550>.]
+[2024-10-18 13:07:59,566: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-10-18 13:07:59,570: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-10-18 13:07:59,573: INFO: common: created directory at: artifacts]
+[2024-10-18 13:07:59,574: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-10-18 13:07:59,576: INFO: 1136638258: artifacts/data_ingestion/data.zip already exists and the size is <function get_size at 0x000001F45A06A550>.]
+[2024-10-18 13:25:36,513: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-10-18 13:25:36,517: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-10-18 13:25:36,518: INFO: common: created directory at: artifacts]
+[2024-10-18 13:25:36,519: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-10-18 13:25:36,521: INFO: 1136638258: artifacts/data_ingestion/data.zip already exists and the size is <function get_size at 0x000001E9496094C0>.]
+[2024-10-18 13:26:08,571: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-10-18 13:26:08,573: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-10-18 13:26:08,575: INFO: common: created directory at: artifacts]
+[2024-10-18 13:26:08,576: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-10-18 13:26:08,577: INFO: 1136638258: artifacts/data_ingestion/data.zip already exists and the size is <function get_size at 0x000001E9496094C0>.]
+[2024-10-18 13:37:14,804: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-10-18 13:37:14,806: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-10-18 13:37:14,807: INFO: common: created directory at: artifacts]
+[2024-10-18 13:37:14,808: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-10-18 13:37:28,748: INFO: 1648648482: artifacts/data_ingestion/data.zip download! with following info: 
+x-amz-id-2: hYZEF63xa5YQ71InU0v8CYdOugd0tFzVE83Z+8x21is26ynmgtMSG7iAG9pRpp3w4uKGZxoT7zA=
+x-amz-request-id: N63K4F1XF75QBAVK
+Date: Fri, 18 Oct 2024 16:37:17 GMT
+Last-Modified: Fri, 18 Oct 2024 16:06:27 GMT
+ETag: "4e2c131c4b6453819d10a393769e559e-17"
+x-amz-server-side-encryption: AES256
+x-amz-version-id: 2fgFG8MSYT9obUj5O3cekBRE_2.79FyS
+Content-Disposition: inline
+Accept-Ranges: bytes
+Content-Type: application/zip
+Server: AmazonS3
+Content-Length: 279303231
+Connection: close
+
+]
+[2024-10-18 13:40:47,559: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-10-18 13:40:47,563: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-10-18 13:40:47,565: INFO: common: created directory at: artifacts]
+[2024-10-18 13:40:47,566: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-10-18 13:40:47,568: INFO: 3030581333: artifacts/data_ingestion/data.zip already exists and the size is <function get_size at 0x000001A317EAA550>.]
+[2024-10-18 13:40:55,285: INFO: 3030581333: Extracted artifacts/data_ingestion/data.zip to artifacts/data_ingestion]
