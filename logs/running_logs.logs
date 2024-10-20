@@ -59,3 +59,54 @@ Connection: close
 ]
 [2024-10-18 15:36:37,953: INFO: data_ingestion: Extracted artifacts/data_ingestion/data.zip to artifacts/data_ingestion]
 [2024-10-18 15:36:37,953: INFO: main: Data Ingestion Stage completed successfully.]
+[2024-10-20 11:04:31,121: INFO: main: Starting Data Ingestion Stage]
+[2024-10-20 11:04:31,212: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-10-20 11:04:31,223: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-10-20 11:04:31,223: INFO: common: created directory at: artifacts]
+[2024-10-20 11:04:31,223: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-10-20 11:04:32,140: ERROR: main: HTTP Error 403: Forbidden]
+Traceback (most recent call last):
+  File "main.py", line 9, in <module>
+    obj.main()
+  File "d:\proyectos\mlops\chicken_disease_classification_mlops_project\src\cnnClassifier\pipeline\stage_01_data_ingestion.py", line 16, in main
+    data_ingestion.download_file()
+  File "d:\proyectos\mlops\chicken_disease_classification_mlops_project\src\cnnClassifier\components\data_ingestion.py", line 16, in download_file
+    filename, headers = request.urlretrieve(
+  File "C:\Users\javie\.conda\envs\chickendis\lib\urllib\request.py", line 247, in urlretrieve
+    with contextlib.closing(urlopen(url, data)) as fp:
+  File "C:\Users\javie\.conda\envs\chickendis\lib\urllib\request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Users\javie\.conda\envs\chickendis\lib\urllib\request.py", line 531, in open
+    response = meth(req, response)
+  File "C:\Users\javie\.conda\envs\chickendis\lib\urllib\request.py", line 640, in http_response
+    response = self.parent.error(
+  File "C:\Users\javie\.conda\envs\chickendis\lib\urllib\request.py", line 569, in error
+    return self._call_chain(*args)
+  File "C:\Users\javie\.conda\envs\chickendis\lib\urllib\request.py", line 502, in _call_chain
+    result = func(*args)
+  File "C:\Users\javie\.conda\envs\chickendis\lib\urllib\request.py", line 649, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 403: Forbidden
+[2024-10-20 11:06:51,121: INFO: main: Starting Data Ingestion Stage]
+[2024-10-20 11:06:51,129: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-10-20 11:06:51,129: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-10-20 11:06:51,130: INFO: common: created directory at: artifacts]
+[2024-10-20 11:06:51,130: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-10-20 11:07:05,660: INFO: data_ingestion: artifacts/data_ingestion/data.zip download! with following info: 
+x-amz-id-2: WfW5vSEHRz/I3nlyJ/lLWjmL8nFpp1pQtQp5HEFlkM94omSYtlQ03uwGsT72wNCra/wvQEdyqJSwLnarazTHAY9j3DkG/sq0yU/toVzdoQY=
+x-amz-request-id: 5NHPNXB1951T5VKC
+Date: Sun, 20 Oct 2024 14:06:52 GMT
+Last-Modified: Fri, 18 Oct 2024 16:06:27 GMT
+ETag: "4e2c131c4b6453819d10a393769e559e-17"
+x-amz-server-side-encryption: AES256
+x-amz-version-id: 2fgFG8MSYT9obUj5O3cekBRE_2.79FyS
+Content-Disposition: inline
+Accept-Ranges: bytes
+Content-Type: application/zip
+Server: AmazonS3
+Content-Length: 279303231
+Connection: close
+
+]
+[2024-10-20 11:07:20,800: INFO: data_ingestion: Extracted artifacts/data_ingestion/data.zip to artifacts/data_ingestion]
+[2024-10-20 11:07:20,800: INFO: main: Data Ingestion Stage completed successfully.]
