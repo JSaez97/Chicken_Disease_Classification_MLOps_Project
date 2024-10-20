@@ -110,3 +110,117 @@ Connection: close
 ]
 [2024-10-20 11:07:20,800: INFO: data_ingestion: Extracted artifacts/data_ingestion/data.zip to artifacts/data_ingestion]
 [2024-10-20 11:07:20,800: INFO: main: Data Ingestion Stage completed successfully.]
+[2024-10-20 17:06:45,321: INFO: main: Starting Data Ingestion Stage]
+[2024-10-20 17:06:45,376: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-10-20 17:06:45,409: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-10-20 17:06:45,411: INFO: common: created directory at: artifacts]
+[2024-10-20 17:06:45,412: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-10-20 17:06:59,091: INFO: data_ingestion: artifacts/data_ingestion/data.zip download! with following info: 
+x-amz-id-2: nDDdWsLgVLnK6r/2fyeR1u7NTloF7M/xLcoIJZNcJ5UpQ+YuuSGWbtrrp7ydxEVWT8qXCh0QbIw=
+x-amz-request-id: 78RQYNKN12FMYM47
+Date: Sun, 20 Oct 2024 20:06:47 GMT
+Last-Modified: Fri, 18 Oct 2024 16:06:27 GMT
+ETag: "4e2c131c4b6453819d10a393769e559e-17"
+x-amz-server-side-encryption: AES256
+x-amz-version-id: 2fgFG8MSYT9obUj5O3cekBRE_2.79FyS
+Content-Disposition: inline
+Accept-Ranges: bytes
+Content-Type: application/zip
+Server: AmazonS3
+Content-Length: 279303231
+Connection: close
+
+]
+[2024-10-20 17:07:07,438: INFO: data_ingestion: Extracted artifacts/data_ingestion/data.zip to artifacts/data_ingestion]
+[2024-10-20 17:07:07,438: INFO: main: Data Ingestion Stage completed successfully.]
+[2024-10-20 17:07:07,439: INFO: main: Starting Prepare Base Model Stage]
+[2024-10-20 17:07:07,448: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-10-20 17:07:07,450: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-10-20 17:07:07,450: INFO: common: created directory at: artifacts]
+[2024-10-20 17:07:07,451: INFO: common: created directory at: artifacts/prepare_base_model]
+[2024-10-20 17:07:07,451: ERROR: main: "'ConfigBox' object has no attribute 'updated_base_model_path'"]
+Traceback (most recent call last):
+  File "box\box.py", line 503, in box.box.Box.__getitem__
+KeyError: 'updated_base_model_path'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\box.py", line 536, in box.box.Box.__getattr__
+  File "box\box.py", line 524, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'updated_base_model_path'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\box.py", line 538, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'updated_base_model_path'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\config_box.py", line 28, in box.config_box.ConfigBox.__getattr__
+  File "box\box.py", line 552, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'updated_base_model_path'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\box.py", line 503, in box.box.Box.__getitem__
+KeyError: 'updated_base_model_path'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\box.py", line 536, in box.box.Box.__getattr__
+  File "box\box.py", line 524, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'updated_base_model_path'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\box.py", line 538, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'updated_base_model_path'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "main.py", line 20, in <module>
+    prepare_base_model.main()
+  File "d:\proyectos\mlops\chicken_disease_classification_mlops_project\src\cnnClassifier\pipeline\stage_02_prepare_base_model.py", line 13, in main
+    prepare_base_model_config = config.get_prepare_base_model_config()
+  File "d:\proyectos\mlops\chicken_disease_classification_mlops_project\src\cnnClassifier\config\configuration.py", line 41, in get_prepare_base_model_config
+    updated_base_model_path=Path(config.updated_base_model_path),
+  File "box\config_box.py", line 30, in box.config_box.ConfigBox.__getattr__
+  File "box\box.py", line 552, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'updated_base_model_path'"
+[2024-10-20 17:17:37,261: INFO: main: Starting Data Ingestion Stage]
+[2024-10-20 17:17:37,266: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-10-20 17:17:37,268: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-10-20 17:17:37,268: INFO: common: created directory at: artifacts]
+[2024-10-20 17:17:37,269: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-10-20 17:17:50,894: INFO: data_ingestion: artifacts/data_ingestion/data.zip download! with following info: 
+x-amz-id-2: Pt3HtAdhv6dj4UhXWh27ehJZ+ovXERvToEN/YB6OrGY6nbdEWuCdV+wkGEbrh/ym3wG5xmOD7y4=
+x-amz-request-id: C79GWMJZP7Q28BCQ
+Date: Sun, 20 Oct 2024 20:17:39 GMT
+Last-Modified: Fri, 18 Oct 2024 16:06:27 GMT
+ETag: "4e2c131c4b6453819d10a393769e559e-17"
+x-amz-server-side-encryption: AES256
+x-amz-version-id: 2fgFG8MSYT9obUj5O3cekBRE_2.79FyS
+Content-Disposition: inline
+Accept-Ranges: bytes
+Content-Type: application/zip
+Server: AmazonS3
+Content-Length: 279303231
+Connection: close
+
+]
+[2024-10-20 17:17:59,321: INFO: data_ingestion: Extracted artifacts/data_ingestion/data.zip to artifacts/data_ingestion]
+[2024-10-20 17:17:59,321: INFO: main: Data Ingestion Stage completed successfully.]
+[2024-10-20 17:17:59,322: INFO: main: Starting Prepare Base Model Stage]
+[2024-10-20 17:17:59,328: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-10-20 17:17:59,331: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-10-20 17:17:59,334: INFO: common: created directory at: artifacts]
+[2024-10-20 17:17:59,336: INFO: common: created directory at: artifacts/prepare_base_model]
+[2024-10-20 17:18:00,191: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2024-10-20 17:18:00,983: INFO: main: Prepare Base Model Stage completed successfully.]
