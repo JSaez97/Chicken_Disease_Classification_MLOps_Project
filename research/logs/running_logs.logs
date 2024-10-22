@@ -172,3 +172,7 @@ Connection: close
 [2024-10-21 17:24:26,682: INFO: common: created directory at: artifacts\prepare_callbacks\checkpoint_dir]
 [2024-10-21 17:24:26,683: INFO: common: created directory at: artifacts\prepare_callbacks\tensorboard_log_dir]
 [2024-10-21 17:24:26,686: INFO: common: created directory at: artifacts\training]
+[2024-10-22 11:40:20,319: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-10-22 11:40:20,342: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-10-22 11:40:20,344: INFO: common: created directory at: artifacts]
+[2024-10-22 11:46:21,113: INFO: common: json file saved at: scores.json]

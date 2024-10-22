@@ -393,3 +393,285 @@ AttributeError: 'ConfigurationManager' object has no attribute 'get_prepare_call
 [2024-10-21 20:00:15,088: INFO: common: created directory at: artifacts\prepare_callbacks\tensorboard_log_dir]
 [2024-10-21 20:00:15,090: INFO: common: created directory at: artifacts\training]
 [2024-10-21 20:20:29,347: INFO: main: Training completed successfully.]
+[2024-10-22 11:48:16,751: INFO: main: Starting Data Ingestion Stage]
+[2024-10-22 11:48:16,781: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-10-22 11:48:16,782: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-10-22 11:48:16,783: INFO: common: created directory at: artifacts]
+[2024-10-22 11:48:16,783: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-10-22 11:48:17,556: ERROR: main: HTTP Error 403: Forbidden]
+Traceback (most recent call last):
+  File "main.py", line 14, in <module>
+    obj.main()
+  File "d:\proyectos\mlops\chicken_disease_classification_mlops_project\src\cnnClassifier\pipeline\stage_01_data_ingestion.py", line 16, in main
+    data_ingestion.download_file()
+  File "d:\proyectos\mlops\chicken_disease_classification_mlops_project\src\cnnClassifier\components\data_ingestion.py", line 16, in download_file
+    filename, headers = request.urlretrieve(
+  File "C:\Users\javie\.conda\envs\chickendis\lib\urllib\request.py", line 247, in urlretrieve
+    with contextlib.closing(urlopen(url, data)) as fp:
+  File "C:\Users\javie\.conda\envs\chickendis\lib\urllib\request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Users\javie\.conda\envs\chickendis\lib\urllib\request.py", line 531, in open
+    response = meth(req, response)
+  File "C:\Users\javie\.conda\envs\chickendis\lib\urllib\request.py", line 640, in http_response
+    response = self.parent.error(
+  File "C:\Users\javie\.conda\envs\chickendis\lib\urllib\request.py", line 569, in error
+    return self._call_chain(*args)
+  File "C:\Users\javie\.conda\envs\chickendis\lib\urllib\request.py", line 502, in _call_chain
+    result = func(*args)
+  File "C:\Users\javie\.conda\envs\chickendis\lib\urllib\request.py", line 649, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 403: Forbidden
+[2024-10-22 11:49:33,088: INFO: main: Starting Data Ingestion Stage]
+[2024-10-22 11:49:33,099: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-10-22 11:49:33,101: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-10-22 11:49:33,102: INFO: common: created directory at: artifacts]
+[2024-10-22 11:49:33,102: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-10-22 11:49:50,070: INFO: data_ingestion: artifacts/data_ingestion/data.zip download! with following info: 
+x-amz-id-2: bqfs+lqX5tEN7T4N1HTHHGUs18ILunyfCUeGuyFuG1ZI+H+CeZEaHyuunv7E3fzfp3Ww9UDrYEJLSmLsQYDSfyUNpuYic8/kzK1nW++pkN8=
+x-amz-request-id: XTH6R3125RN6CYHB
+Date: Tue, 22 Oct 2024 14:49:35 GMT
+Last-Modified: Mon, 21 Oct 2024 22:41:23 GMT
+ETag: "0cdf13bd9b106fa7494e43fe5e67d001-17"
+x-amz-server-side-encryption: AES256
+x-amz-version-id: wFtKV97gLlGnnewk9Fhh34Vea2MfvodM
+Content-Disposition: inline
+Accept-Ranges: bytes
+Content-Type: application/zip
+Server: AmazonS3
+Content-Length: 279330765
+Connection: close
+
+]
+[2024-10-22 11:50:01,602: INFO: data_ingestion: Extracted artifacts/data_ingestion/data.zip to artifacts/data_ingestion]
+[2024-10-22 11:50:01,602: INFO: main: Data Ingestion Stage completed successfully.]
+[2024-10-22 11:50:01,603: INFO: main: Stage Data Sorting and Transfer Stage started]
+[2024-10-22 11:50:01,609: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-10-22 11:50:01,610: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-10-22 11:50:01,611: INFO: common: created directory at: artifacts]
+[2024-10-22 11:50:01,611: INFO: common: created directory at: artifacts\data_sorting]
+[2024-10-22 11:50:01,612: INFO: common: created directory at: artifacts\data_sorting\sorted_images]
+[2024-10-22 11:51:43,787: INFO: main: Stage Data Sorting and Transfer Stage completed]
+[2024-10-22 11:51:43,788: INFO: main: Starting Prepare Base Model Stage]
+[2024-10-22 11:51:43,815: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-10-22 11:51:43,820: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-10-22 11:51:43,821: INFO: common: created directory at: artifacts]
+[2024-10-22 11:51:43,822: INFO: common: created directory at: artifacts/prepare_base_model]
+[2024-10-22 11:51:44,708: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2024-10-22 11:51:44,962: INFO: main: Prepare Base Model Stage completed successfully.]
+[2024-10-22 11:51:44,962: INFO: main: Starting Training]
+[2024-10-22 11:51:44,968: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-10-22 11:51:44,970: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-10-22 11:51:44,971: INFO: common: created directory at: artifacts]
+[2024-10-22 11:51:44,972: INFO: common: created directory at: artifacts\prepare_callbacks\checkpoint_dir]
+[2024-10-22 11:51:44,972: INFO: common: created directory at: artifacts\prepare_callbacks\tensorboard_log_dir]
+[2024-10-22 11:51:44,977: INFO: common: created directory at: artifacts\training]
+[2024-10-22 12:10:02,709: INFO: main: Training completed successfully.]
+[2024-10-22 12:10:02,710: INFO: main: Starting Evaluation Stage]
+[2024-10-22 12:10:02,713: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-10-22 12:10:02,715: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-10-22 12:10:02,715: INFO: common: created directory at: artifacts]
+[2024-10-22 12:10:03,281: ERROR: main: module 'pyexpat.model' has no attribute 'evaluate']
+Traceback (most recent call last):
+  File "main.py", line 55, in <module>
+    model_evalution.main()
+  File "d:\proyectos\mlops\chicken_disease_classification_mlops_project\src\cnnClassifier\pipeline\stage_04_evaluation.py", line 17, in main
+    evaluation.evaluation()
+  File "d:\proyectos\mlops\chicken_disease_classification_mlops_project\src\cnnClassifier\components\evaluation.py", line 45, in evaluation
+    self.score = model.evaluate(self.valid_generator)
+AttributeError: module 'pyexpat.model' has no attribute 'evaluate'
+[2024-10-22 12:17:21,513: INFO: main: Starting Data Ingestion Stage]
+[2024-10-22 12:17:21,518: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-10-22 12:17:21,520: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-10-22 12:17:21,520: INFO: common: created directory at: artifacts]
+[2024-10-22 12:17:21,522: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-10-22 12:17:21,523: INFO: data_ingestion: artifacts/data_ingestion/data.zip already exists and the size is <function get_size at 0x000001B52A23CA60>.]
+[2024-10-22 12:17:32,607: INFO: data_ingestion: Extracted artifacts/data_ingestion/data.zip to artifacts/data_ingestion]
+[2024-10-22 12:17:32,607: INFO: main: Data Ingestion Stage completed successfully.]
+[2024-10-22 12:17:32,607: INFO: main: Stage Data Sorting and Transfer Stage started]
+[2024-10-22 12:17:32,612: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-10-22 12:17:32,614: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-10-22 12:17:32,614: INFO: common: created directory at: artifacts]
+[2024-10-22 12:17:32,614: INFO: common: created directory at: artifacts\data_sorting]
+[2024-10-22 12:17:32,614: INFO: common: created directory at: artifacts\data_sorting\sorted_images]
+[2024-10-22 12:19:17,088: INFO: main: Stage Data Sorting and Transfer Stage completed]
+[2024-10-22 12:19:17,089: INFO: main: Starting Prepare Base Model Stage]
+[2024-10-22 12:19:17,100: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-10-22 12:19:17,110: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-10-22 12:19:17,110: INFO: common: created directory at: artifacts]
+[2024-10-22 12:19:17,111: INFO: common: created directory at: artifacts/prepare_base_model]
+[2024-10-22 12:19:17,701: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2024-10-22 12:19:22,765: INFO: main: Prepare Base Model Stage completed successfully.]
+[2024-10-22 12:19:22,766: INFO: main: Starting Training]
+[2024-10-22 12:19:22,770: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-10-22 12:19:22,772: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-10-22 12:19:22,773: INFO: common: created directory at: artifacts]
+[2024-10-22 12:19:22,773: INFO: common: created directory at: artifacts\prepare_callbacks\checkpoint_dir]
+[2024-10-22 12:19:22,774: INFO: common: created directory at: artifacts\prepare_callbacks\tensorboard_log_dir]
+[2024-10-22 12:19:22,776: INFO: common: created directory at: artifacts\training]
+[2024-10-22 12:20:46,986: INFO: main: Starting Data Ingestion Stage]
+[2024-10-22 12:20:46,991: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-10-22 12:20:46,993: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-10-22 12:20:46,993: INFO: common: created directory at: artifacts]
+[2024-10-22 12:20:46,993: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-10-22 12:21:04,471: INFO: data_ingestion: artifacts/data_ingestion/data.zip download! with following info: 
+x-amz-id-2: Z4puJdapAhVY2Hz/WWTDXYe6g4DyzMN2ZWpOBHLVuGJZW2lLvYGOOxxyKobPMaCt6yN/iYtI5H4=
+x-amz-request-id: PHJQ2G7564RE4WEZ
+Date: Tue, 22 Oct 2024 15:20:49 GMT
+Last-Modified: Mon, 21 Oct 2024 22:41:23 GMT
+ETag: "0cdf13bd9b106fa7494e43fe5e67d001-17"
+x-amz-server-side-encryption: AES256
+x-amz-version-id: wFtKV97gLlGnnewk9Fhh34Vea2MfvodM
+Content-Disposition: inline
+Accept-Ranges: bytes
+Content-Type: application/zip
+Content-Length: 279330765
+Server: AmazonS3
+Connection: close
+
+]
+[2024-10-22 12:21:12,326: INFO: data_ingestion: Extracted artifacts/data_ingestion/data.zip to artifacts/data_ingestion]
+[2024-10-22 12:21:12,327: INFO: main: Data Ingestion Stage completed successfully.]
+[2024-10-22 12:21:12,327: INFO: main: Stage Data Sorting and Transfer Stage started]
+[2024-10-22 12:21:12,332: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-10-22 12:21:12,335: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-10-22 12:21:12,336: INFO: common: created directory at: artifacts]
+[2024-10-22 12:21:12,336: INFO: common: created directory at: artifacts\data_sorting]
+[2024-10-22 12:21:12,337: INFO: common: created directory at: artifacts\data_sorting\sorted_images]
+[2024-10-22 12:23:21,726: INFO: main: Stage Data Sorting and Transfer Stage completed]
+[2024-10-22 12:23:21,726: INFO: main: Starting Prepare Base Model Stage]
+[2024-10-22 12:23:21,738: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-10-22 12:23:21,741: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-10-22 12:23:21,741: INFO: common: created directory at: artifacts]
+[2024-10-22 12:23:21,742: INFO: common: created directory at: artifacts/prepare_base_model]
+[2024-10-22 12:23:22,338: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2024-10-22 12:23:22,591: INFO: main: Prepare Base Model Stage completed successfully.]
+[2024-10-22 12:23:22,591: INFO: main: Starting Training]
+[2024-10-22 12:23:22,596: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-10-22 12:23:22,598: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-10-22 12:23:22,599: INFO: common: created directory at: artifacts]
+[2024-10-22 12:23:22,599: INFO: common: created directory at: artifacts\prepare_callbacks\checkpoint_dir]
+[2024-10-22 12:23:22,599: INFO: common: created directory at: artifacts\prepare_callbacks\tensorboard_log_dir]
+[2024-10-22 12:23:22,603: INFO: common: created directory at: artifacts\training]
+[2024-10-22 12:45:27,589: INFO: main: Training completed successfully.]
+[2024-10-22 12:45:27,589: INFO: main: Starting Evaluation Stage]
+[2024-10-22 12:45:27,594: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-10-22 12:45:27,596: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-10-22 12:45:27,596: INFO: common: created directory at: artifacts]
+[2024-10-22 12:51:15,647: INFO: common: json file saved at: scores.json]
+[2024-10-22 12:51:15,647: INFO: main: Evaluation Stage completed successfully.]
+[2024-10-22 17:22:15,801: INFO: stage_01_data_ingestion: Starting Data Ingestion Stage]
+[2024-10-22 17:22:15,823: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-10-22 17:22:15,847: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-10-22 17:22:15,867: INFO: common: created directory at: artifacts]
+[2024-10-22 17:22:15,867: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-10-22 17:22:30,846: INFO: data_ingestion: artifacts/data_ingestion/data.zip download! with following info: 
+x-amz-id-2: TO4Z5Z0cRAZKjWxVNW1Mr5PQmSWjEqRqJNbdF8jj/DA74wZFO1zUT3yvrqLuXSJrvByI5eY54ss=
+x-amz-request-id: BY04EE5QTB4ER8E1
+Date: Tue, 22 Oct 2024 20:22:17 GMT
+Last-Modified: Mon, 21 Oct 2024 22:41:23 GMT
+ETag: "0cdf13bd9b106fa7494e43fe5e67d001-17"
+x-amz-server-side-encryption: AES256
+x-amz-version-id: wFtKV97gLlGnnewk9Fhh34Vea2MfvodM
+Content-Disposition: inline
+Accept-Ranges: bytes
+Content-Type: application/zip
+Server: AmazonS3
+Content-Length: 279330765
+Connection: close
+
+]
+[2024-10-22 17:22:49,943: INFO: data_ingestion: Extracted artifacts/data_ingestion/data.zip to artifacts/data_ingestion]
+[2024-10-22 17:22:49,943: INFO: stage_01_data_ingestion: Data Ingestion Stage completed successfully.]
+[2024-10-22 17:24:53,529: INFO: stage_01_2_data_sorting: Stage Data Sorting and Transfer started]
+[2024-10-22 17:24:53,534: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-10-22 17:24:53,536: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-10-22 17:24:53,536: INFO: common: created directory at: artifacts]
+[2024-10-22 17:24:53,536: INFO: common: created directory at: artifacts\data_sorting]
+[2024-10-22 17:24:53,537: INFO: common: created directory at: artifacts\data_sorting\sorted_images]
+[2024-10-22 17:26:27,192: INFO: stage_01_2_data_sorting: Stage Data Sorting and Transfer completed]
+[2024-10-22 17:28:49,428: INFO: stage_01_2_data_sorting: Stage Data Sorting and Transfer started]
+[2024-10-22 17:28:49,432: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-10-22 17:28:49,434: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-10-22 17:28:49,435: INFO: common: created directory at: artifacts]
+[2024-10-22 17:28:49,435: INFO: common: created directory at: artifacts\data_sorting]
+[2024-10-22 17:28:49,436: INFO: common: created directory at: artifacts\data_sorting\sorted_images]
+[2024-10-22 17:30:15,914: INFO: stage_01_2_data_sorting: Stage Data Sorting and Transfer completed]
+[2024-10-22 17:31:57,532: INFO: stage_01_2_data_sorting: Stage Data Sorting and Transfer started]
+[2024-10-22 17:31:57,536: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-10-22 17:31:57,537: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-10-22 17:31:57,537: INFO: common: created directory at: artifacts]
+[2024-10-22 17:31:57,538: INFO: common: created directory at: artifacts\data_sorting]
+[2024-10-22 17:31:57,538: INFO: common: created directory at: artifacts\data_sorting\sorted_images]
+[2024-10-22 17:31:57,542: ERROR: stage_01_2_data_sorting: [Errno 2] No such file or directory: 'artifacts\\data_ingestion\\train_data.csv']
+Traceback (most recent call last):
+  File "src/cnnClassifier/pipeline/stage_01_2_data_sorting.py", line 32, in <module>
+    obj.main()
+  File "src/cnnClassifier/pipeline/stage_01_2_data_sorting.py", line 23, in main
+    data_sorting.sort_images(config=data_sorting_config)  # Método para ordenar las imágenes
+  File "d:\proyectos\mlops\chicken_disease_classification_mlops_project\src\cnnClassifier\components\data_sorting.py", line 10, in sort_images
+    df = pd.read_csv(config.source_csv)
+  File "C:\Users\javie\.conda\envs\chickendis\lib\site-packages\pandas\io\parsers\readers.py", line 912, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "C:\Users\javie\.conda\envs\chickendis\lib\site-packages\pandas\io\parsers\readers.py", line 577, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "C:\Users\javie\.conda\envs\chickendis\lib\site-packages\pandas\io\parsers\readers.py", line 1407, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "C:\Users\javie\.conda\envs\chickendis\lib\site-packages\pandas\io\parsers\readers.py", line 1661, in _make_engine
+    self.handles = get_handle(
+  File "C:\Users\javie\.conda\envs\chickendis\lib\site-packages\pandas\io\common.py", line 859, in get_handle
+    handle = open(
+FileNotFoundError: [Errno 2] No such file or directory: 'artifacts\\data_ingestion\\train_data.csv'
+[2024-10-22 17:33:04,403: INFO: stage_01_data_ingestion: Starting Data Ingestion Stage]
+[2024-10-22 17:33:04,408: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-10-22 17:33:04,409: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-10-22 17:33:04,410: INFO: common: created directory at: artifacts]
+[2024-10-22 17:33:04,410: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-10-22 17:33:26,475: INFO: data_ingestion: artifacts/data_ingestion/data.zip download! with following info: 
+x-amz-id-2: 3/+Bh0t0zii+01+5m7cqsd4dVnM8VTXexbSRXiCBxZpRcASKac3hJBq7jObB14IpqjHQdEqcURcFw5ZTMsptat1v2uVio1ma29WP2iEzRwk=
+x-amz-request-id: P151DF5BQR860MBV
+Date: Tue, 22 Oct 2024 20:33:06 GMT
+Last-Modified: Mon, 21 Oct 2024 22:41:23 GMT
+ETag: "0cdf13bd9b106fa7494e43fe5e67d001-17"
+x-amz-server-side-encryption: AES256
+x-amz-version-id: wFtKV97gLlGnnewk9Fhh34Vea2MfvodM
+Content-Disposition: inline
+Accept-Ranges: bytes
+Content-Type: application/zip
+Content-Length: 279330765
+Server: AmazonS3
+Connection: close
+
+]
+[2024-10-22 17:33:32,083: INFO: data_ingestion: Extracted artifacts/data_ingestion/data.zip to artifacts/data_ingestion]
+[2024-10-22 17:33:32,083: INFO: stage_01_data_ingestion: Data Ingestion Stage completed successfully.]
+[2024-10-22 17:35:00,157: INFO: stage_01_2_data_sorting: Stage Data Sorting and Transfer started]
+[2024-10-22 17:35:00,161: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-10-22 17:35:00,163: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-10-22 17:35:00,163: INFO: common: created directory at: artifacts]
+[2024-10-22 17:35:00,164: INFO: common: created directory at: artifacts\data_sorting]
+[2024-10-22 17:35:00,164: INFO: common: created directory at: artifacts\data_sorting\sorted_images]
+[2024-10-22 17:36:32,501: INFO: stage_01_2_data_sorting: Stage Data Sorting and Transfer completed]
+[2024-10-22 17:36:39,623: INFO: stage_02_prepare_base_model: Prepare Base Model started.]
+[2024-10-22 17:36:39,627: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-10-22 17:36:39,629: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-10-22 17:36:39,629: INFO: common: created directory at: artifacts]
+[2024-10-22 17:36:39,629: INFO: common: created directory at: artifacts/prepare_base_model]
+[2024-10-22 17:36:40,469: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2024-10-22 17:36:40,778: INFO: stage_02_prepare_base_model: Prepare Base Model completed successfully.]
+[2024-10-22 17:37:40,684: INFO: stage_03_training: Stage Training started]
+[2024-10-22 17:37:40,690: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-10-22 17:37:40,692: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-10-22 17:37:40,692: INFO: common: created directory at: artifacts]
+[2024-10-22 17:37:40,692: INFO: common: created directory at: artifacts\prepare_callbacks\checkpoint_dir]
+[2024-10-22 17:37:40,693: INFO: common: created directory at: artifacts\prepare_callbacks\tensorboard_log_dir]
+[2024-10-22 17:37:40,698: INFO: common: created directory at: artifacts\training]
+[2024-10-22 17:55:28,994: INFO: stage_03_training: Stage Training completed]
+[2024-10-22 17:55:40,693: INFO: stage_04_evaluation: *******************]
+[2024-10-22 17:55:40,693: INFO: stage_04_evaluation: >>>>>> stage Evaluation Stage started <<<<<<]
+[2024-10-22 17:55:40,698: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-10-22 17:55:40,699: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-10-22 17:55:40,700: INFO: common: created directory at: artifacts]
+[2024-10-22 18:00:31,575: INFO: common: json file saved at: scores.json]
+[2024-10-22 18:00:31,576: INFO: stage_04_evaluation: >>>>>> stage Evaluation Stage completed <<<<<<
+
+x==========x]
