@@ -675,3 +675,256 @@ Connection: close
 [2024-10-22 18:00:31,576: INFO: stage_04_evaluation: >>>>>> stage Evaluation Stage completed <<<<<<
 
 x==========x]
+[2024-10-23 08:14:12,285: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:80
+ * Running on http://192.168.100.54:80]
+[2024-10-23 08:14:12,320: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-10-23 08:16:25,815: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:80
+ * Running on http://192.168.100.54:80]
+[2024-10-23 08:16:25,817: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-10-23 08:16:38,703: INFO: _internal: 127.0.0.1 - - [23/Oct/2024 08:16:38] "GET / HTTP/1.1" 200 -]
+[2024-10-23 08:18:16,147: INFO: _internal: 127.0.0.1 - - [23/Oct/2024 08:18:16] "POST /predict HTTP/1.1" 200 -]
+[2024-10-23 08:18:40,849: INFO: _internal: 127.0.0.1 - - [23/Oct/2024 08:18:40] "POST /predict HTTP/1.1" 200 -]
+[2024-10-23 08:20:56,339: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:80
+ * Running on http://192.168.100.54:80]
+[2024-10-23 08:20:56,339: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-10-23 08:21:01,125: INFO: _internal: 127.0.0.1 - - [23/Oct/2024 08:21:01] "GET / HTTP/1.1" 200 -]
+[2024-10-23 08:21:07,125: INFO: _internal: 127.0.0.1 - - [23/Oct/2024 08:21:07] "POST /predict HTTP/1.1" 200 -]
+[2024-10-23 08:21:38,371: INFO: _internal: 127.0.0.1 - - [23/Oct/2024 08:21:38] "POST /predict HTTP/1.1" 200 -]
+[2024-10-23 08:21:40,103: INFO: _internal: 127.0.0.1 - - [23/Oct/2024 08:21:40] "POST /predict HTTP/1.1" 200 -]
+[2024-10-23 08:21:44,680: INFO: _internal: 127.0.0.1 - - [23/Oct/2024 08:21:44] "GET / HTTP/1.1" 200 -]
+[2024-10-23 08:21:53,521: INFO: _internal: 127.0.0.1 - - [23/Oct/2024 08:21:53] "POST /predict HTTP/1.1" 200 -]
+[2024-10-23 08:21:57,052: INFO: _internal: 127.0.0.1 - - [23/Oct/2024 08:21:57] "GET / HTTP/1.1" 200 -]
+[2024-10-23 08:21:58,857: ERROR: app: Exception on /predict [POST]]
+Traceback (most recent call last):
+  File "C:\Users\javie\.conda\envs\chickendis\lib\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\javie\.conda\envs\chickendis\lib\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\javie\.conda\envs\chickendis\lib\site-packages\flask_cors\extension.py", line 194, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\javie\.conda\envs\chickendis\lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\javie\.conda\envs\chickendis\lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\javie\.conda\envs\chickendis\lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "app.py", line 40, in predictRoute
+    result = clApp.classifier.predict()
+  File "d:\proyectos\mlops\chicken_disease_classification_mlops_project\src\cnnClassifier\pipeline\predict.py", line 16, in predict
+    test_image = image.load_img(imagename, target_size=(224, 224))
+  File "C:\Users\javie\.conda\envs\chickendis\lib\site-packages\keras\src\utils\image_utils.py", line 423, in load_img
+    img = pil_image.open(io.BytesIO(f.read()))
+  File "C:\Users\javie\.conda\envs\chickendis\lib\site-packages\PIL\Image.py", line 3498, in open
+    raise UnidentifiedImageError(msg)
+PIL.UnidentifiedImageError: cannot identify image file <_io.BytesIO object at 0x00000253274C7770>
+[2024-10-23 08:21:58,891: INFO: _internal: 127.0.0.1 - - [23/Oct/2024 08:21:58] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
+[2024-10-23 08:22:16,048: INFO: _internal: 127.0.0.1 - - [23/Oct/2024 08:22:16] "GET / HTTP/1.1" 200 -]
+[2024-10-23 08:22:54,526: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:80
+ * Running on http://192.168.100.54:80]
+[2024-10-23 08:22:54,526: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-10-23 08:22:56,562: INFO: _internal: 127.0.0.1 - - [23/Oct/2024 08:22:56] "GET / HTTP/1.1" 200 -]
+[2024-10-23 08:23:02,944: INFO: _internal: 127.0.0.1 - - [23/Oct/2024 08:23:02] "POST /predict HTTP/1.1" 200 -]
+[2024-10-23 08:33:28,693: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:80
+ * Running on http://192.168.100.54:80]
+[2024-10-23 08:33:28,694: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-10-23 08:33:33,069: INFO: _internal: 127.0.0.1 - - [23/Oct/2024 08:33:33] "GET / HTTP/1.1" 200 -]
+[2024-10-23 08:33:38,360: INFO: _internal: 127.0.0.1 - - [23/Oct/2024 08:33:38] "POST /predict HTTP/1.1" 200 -]
+[2024-10-23 08:33:48,352: INFO: _internal: 127.0.0.1 - - [23/Oct/2024 08:33:48] "GET / HTTP/1.1" 200 -]
+[2024-10-23 08:34:01,331: INFO: _internal: 127.0.0.1 - - [23/Oct/2024 08:34:01] "POST /predict HTTP/1.1" 200 -]
+[2024-10-23 08:34:07,486: INFO: _internal: 127.0.0.1 - - [23/Oct/2024 08:34:07] "GET / HTTP/1.1" 200 -]
+[2024-10-23 08:41:35,639: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:80
+ * Running on http://192.168.100.54:80]
+[2024-10-23 08:41:35,640: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-10-23 08:41:39,480: INFO: _internal: 127.0.0.1 - - [23/Oct/2024 08:41:39] "GET / HTTP/1.1" 200 -]
+[2024-10-23 08:41:50,787: INFO: _internal: 127.0.0.1 - - [23/Oct/2024 08:41:50] "POST /predict HTTP/1.1" 200 -]
+[2024-10-23 08:41:54,054: INFO: _internal: 127.0.0.1 - - [23/Oct/2024 08:41:54] "GET / HTTP/1.1" 200 -]
+[2024-10-23 08:42:03,359: INFO: _internal: 127.0.0.1 - - [23/Oct/2024 08:42:03] "POST /predict HTTP/1.1" 200 -]
+[2024-10-23 08:42:38,162: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:80
+ * Running on http://192.168.100.54:80]
+[2024-10-23 08:42:38,162: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-10-23 08:42:40,622: INFO: _internal: 127.0.0.1 - - [23/Oct/2024 08:42:40] "GET / HTTP/1.1" 200 -]
+[2024-10-23 08:42:46,346: INFO: _internal: 127.0.0.1 - - [23/Oct/2024 08:42:46] "POST /predict HTTP/1.1" 200 -]
+[2024-10-23 08:42:51,466: INFO: _internal: 127.0.0.1 - - [23/Oct/2024 08:42:51] "GET / HTTP/1.1" 200 -]
+[2024-10-23 08:42:58,553: INFO: _internal: 127.0.0.1 - - [23/Oct/2024 08:42:58] "POST /predict HTTP/1.1" 200 -]
+[2024-10-23 08:43:31,374: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:80
+ * Running on http://192.168.100.54:80]
+[2024-10-23 08:43:31,374: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-10-23 08:43:32,947: INFO: _internal: 127.0.0.1 - - [23/Oct/2024 08:43:32] "GET / HTTP/1.1" 200 -]
+[2024-10-23 08:43:40,269: INFO: _internal: 127.0.0.1 - - [23/Oct/2024 08:43:40] "POST /predict HTTP/1.1" 200 -]
+[2024-10-23 08:43:44,885: INFO: _internal: 127.0.0.1 - - [23/Oct/2024 08:43:44] "GET / HTTP/1.1" 200 -]
+[2024-10-23 08:43:53,923: INFO: _internal: 127.0.0.1 - - [23/Oct/2024 08:43:53] "POST /predict HTTP/1.1" 200 -]
+[2024-10-23 08:44:00,525: INFO: _internal: 127.0.0.1 - - [23/Oct/2024 08:44:00] "GET / HTTP/1.1" 200 -]
+[2024-10-23 08:44:09,236: INFO: _internal: 127.0.0.1 - - [23/Oct/2024 08:44:09] "POST /predict HTTP/1.1" 200 -]
+[2024-10-23 08:44:41,703: INFO: _internal: 127.0.0.1 - - [23/Oct/2024 08:44:41] "POST /predict HTTP/1.1" 200 -]
+[2024-10-23 08:45:22,644: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:80
+ * Running on http://192.168.100.54:80]
+[2024-10-23 08:45:22,645: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-10-23 08:45:24,689: INFO: _internal: 127.0.0.1 - - [23/Oct/2024 08:45:24] "GET / HTTP/1.1" 200 -]
+[2024-10-23 08:45:35,277: INFO: _internal: 127.0.0.1 - - [23/Oct/2024 08:45:35] "POST /predict HTTP/1.1" 200 -]
+[2024-10-23 08:46:30,301: INFO: _internal: 127.0.0.1 - - [23/Oct/2024 08:46:30] "POST /predict HTTP/1.1" 200 -]
+[2024-10-23 08:47:05,760: INFO: _internal: 127.0.0.1 - - [23/Oct/2024 08:47:05] "POST /predict HTTP/1.1" 200 -]
+[2024-10-23 08:47:07,490: INFO: _internal: 127.0.0.1 - - [23/Oct/2024 08:47:07] "GET / HTTP/1.1" 200 -]
+[2024-10-23 08:47:13,703: INFO: _internal: 127.0.0.1 - - [23/Oct/2024 08:47:13] "POST /predict HTTP/1.1" 200 -]
+[2024-10-23 08:47:42,310: INFO: _internal: 127.0.0.1 - - [23/Oct/2024 08:47:42] "GET / HTTP/1.1" 200 -]
+[2024-10-23 08:47:48,427: WARNING: polymorphic_function: 5 out of the last 5 calls to <function Model.make_predict_function.<locals>.predict_function at 0x000001FB4AC3E9D0> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.]
+[2024-10-23 08:47:48,433: INFO: _internal: 127.0.0.1 - - [23/Oct/2024 08:47:48] "POST /predict HTTP/1.1" 200 -]
+[2024-10-23 08:47:51,455: INFO: _internal: 127.0.0.1 - - [23/Oct/2024 08:47:51] "GET / HTTP/1.1" 200 -]
+[2024-10-23 08:47:57,812: WARNING: polymorphic_function: 6 out of the last 6 calls to <function Model.make_predict_function.<locals>.predict_function at 0x000001FB4ACCC940> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.]
+[2024-10-23 08:47:57,817: INFO: _internal: 127.0.0.1 - - [23/Oct/2024 08:47:57] "POST /predict HTTP/1.1" 200 -]
+[2024-10-23 08:49:28,998: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:80
+ * Running on http://192.168.100.54:80]
+[2024-10-23 08:49:28,998: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-10-23 08:49:32,484: INFO: _internal: 127.0.0.1 - - [23/Oct/2024 08:49:32] "GET / HTTP/1.1" 200 -]
+[2024-10-23 08:49:39,066: INFO: _internal: 127.0.0.1 - - [23/Oct/2024 08:49:39] "POST /predict HTTP/1.1" 200 -]
+[2024-10-23 08:51:29,552: INFO: _internal: 127.0.0.1 - - [23/Oct/2024 08:51:29] "POST /predict HTTP/1.1" 200 -]
+[2024-10-23 08:51:44,271: INFO: _internal: 127.0.0.1 - - [23/Oct/2024 08:51:44] "POST /predict HTTP/1.1" 200 -]
+[2024-10-23 08:51:56,016: INFO: _internal: 127.0.0.1 - - [23/Oct/2024 08:51:56] "POST /predict HTTP/1.1" 200 -]
+[2024-10-23 08:54:59,445: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:80
+ * Running on http://192.168.100.54:80]
+[2024-10-23 08:54:59,445: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-10-23 08:55:03,638: INFO: _internal: 127.0.0.1 - - [23/Oct/2024 08:55:03] "GET / HTTP/1.1" 200 -]
+[2024-10-23 08:55:12,048: INFO: _internal: 127.0.0.1 - - [23/Oct/2024 08:55:12] "POST /predict HTTP/1.1" 200 -]
+[2024-10-23 08:55:34,027: INFO: _internal: 127.0.0.1 - - [23/Oct/2024 08:55:34] "POST /predict HTTP/1.1" 200 -]
+[2024-10-23 09:06:34,320: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:80
+ * Running on http://192.168.100.54:80]
+[2024-10-23 09:06:34,321: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-10-23 09:06:37,642: INFO: _internal: 127.0.0.1 - - [23/Oct/2024 09:06:37] "GET / HTTP/1.1" 200 -]
+[2024-10-23 09:06:45,733: INFO: _internal: 127.0.0.1 - - [23/Oct/2024 09:06:45] "POST /predict HTTP/1.1" 200 -]
+[2024-10-23 09:06:57,783: INFO: _internal: 127.0.0.1 - - [23/Oct/2024 09:06:57] "POST /predict HTTP/1.1" 200 -]
+[2024-10-23 09:07:03,996: INFO: _internal: 127.0.0.1 - - [23/Oct/2024 09:07:03] "POST /predict HTTP/1.1" 200 -]
+[2024-10-23 09:07:11,073: INFO: _internal: 127.0.0.1 - - [23/Oct/2024 09:07:11] "POST /predict HTTP/1.1" 200 -]
+[2024-10-23 09:07:14,033: INFO: _internal: 127.0.0.1 - - [23/Oct/2024 09:07:14] "GET / HTTP/1.1" 200 -]
+[2024-10-23 09:10:04,877: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:80
+ * Running on http://192.168.100.54:80]
+[2024-10-23 09:10:04,877: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-10-23 09:10:09,155: INFO: _internal: 127.0.0.1 - - [23/Oct/2024 09:10:09] "GET / HTTP/1.1" 200 -]
+[2024-10-23 09:10:14,553: INFO: _internal: 127.0.0.1 - - [23/Oct/2024 09:10:14] "POST /predict HTTP/1.1" 200 -]
+[2024-10-23 09:10:20,344: INFO: _internal: 127.0.0.1 - - [23/Oct/2024 09:10:20] "POST /predict HTTP/1.1" 200 -]
+[2024-10-23 09:23:02,313: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:80
+ * Running on http://192.168.100.54:80]
+[2024-10-23 09:23:02,313: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-10-23 09:23:04,046: INFO: _internal: 127.0.0.1 - - [23/Oct/2024 09:23:04] "GET / HTTP/1.1" 200 -]
+[2024-10-23 09:23:11,677: INFO: _internal: 127.0.0.1 - - [23/Oct/2024 09:23:11] "POST /predict HTTP/1.1" 200 -]
+[2024-10-23 09:23:23,561: INFO: _internal: 127.0.0.1 - - [23/Oct/2024 09:23:23] "POST /predict HTTP/1.1" 200 -]
+[2024-10-23 09:23:34,140: INFO: _internal: 127.0.0.1 - - [23/Oct/2024 09:23:34] "POST /predict HTTP/1.1" 200 -]
+[2024-10-23 09:23:36,107: INFO: _internal: 127.0.0.1 - - [23/Oct/2024 09:23:36] "GET / HTTP/1.1" 200 -]
+[2024-10-23 09:23:44,186: INFO: _internal: 127.0.0.1 - - [23/Oct/2024 09:23:44] "POST /predict HTTP/1.1" 200 -]
+[2024-10-23 09:23:53,782: WARNING: polymorphic_function: 5 out of the last 5 calls to <function Model.make_predict_function.<locals>.predict_function at 0x0000026E3EC6B9D0> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.]
+[2024-10-23 09:23:53,786: INFO: _internal: 127.0.0.1 - - [23/Oct/2024 09:23:53] "POST /predict HTTP/1.1" 200 -]
+[2024-10-23 09:24:04,660: WARNING: polymorphic_function: 6 out of the last 6 calls to <function Model.make_predict_function.<locals>.predict_function at 0x0000026E3ECFC940> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.]
+[2024-10-23 09:24:04,667: INFO: _internal: 127.0.0.1 - - [23/Oct/2024 09:24:04] "POST /predict HTTP/1.1" 200 -]
+[2024-10-23 09:24:15,263: INFO: _internal: 127.0.0.1 - - [23/Oct/2024 09:24:15] "POST /predict HTTP/1.1" 200 -]
+[2024-10-23 09:24:22,010: INFO: _internal: 127.0.0.1 - - [23/Oct/2024 09:24:22] "POST /predict HTTP/1.1" 200 -]
+[2024-10-23 09:24:30,276: INFO: _internal: 127.0.0.1 - - [23/Oct/2024 09:24:30] "POST /predict HTTP/1.1" 200 -]
+[2024-10-23 09:24:31,903: INFO: _internal: 127.0.0.1 - - [23/Oct/2024 09:24:31] "GET / HTTP/1.1" 200 -]
+[2024-10-23 09:24:44,345: INFO: _internal: 127.0.0.1 - - [23/Oct/2024 09:24:44] "POST /predict HTTP/1.1" 200 -]
+[2024-10-23 09:36:46,217: INFO: stage_01_data_ingestion: Starting Data Ingestion Stage]
+[2024-10-23 09:36:46,222: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-10-23 09:36:46,223: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-10-23 09:36:46,224: INFO: common: created directory at: artifacts]
+[2024-10-23 09:36:46,224: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-10-23 09:36:46,966: ERROR: stage_01_data_ingestion: HTTP Error 403: Forbidden]
+Traceback (most recent call last):
+  File "src/cnnClassifier/pipeline/stage_01_data_ingestion.py", line 26, in <module>
+    obj.main()
+  File "src/cnnClassifier/pipeline/stage_01_data_ingestion.py", line 16, in main
+    data_ingestion.download_file()
+  File "d:\proyectos\mlops\chicken_disease_classification_mlops_project\src\cnnClassifier\components\data_ingestion.py", line 16, in download_file
+    filename, headers = request.urlretrieve(
+  File "C:\Users\javie\.conda\envs\chickendis\lib\urllib\request.py", line 247, in urlretrieve
+    with contextlib.closing(urlopen(url, data)) as fp:
+  File "C:\Users\javie\.conda\envs\chickendis\lib\urllib\request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Users\javie\.conda\envs\chickendis\lib\urllib\request.py", line 531, in open
+    response = meth(req, response)
+  File "C:\Users\javie\.conda\envs\chickendis\lib\urllib\request.py", line 640, in http_response
+    response = self.parent.error(
+  File "C:\Users\javie\.conda\envs\chickendis\lib\urllib\request.py", line 569, in error
+    return self._call_chain(*args)
+  File "C:\Users\javie\.conda\envs\chickendis\lib\urllib\request.py", line 502, in _call_chain
+    result = func(*args)
+  File "C:\Users\javie\.conda\envs\chickendis\lib\urllib\request.py", line 649, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 403: Forbidden
+[2024-10-23 09:38:10,936: INFO: stage_01_data_ingestion: Starting Data Ingestion Stage]
+[2024-10-23 09:38:10,941: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-10-23 09:38:10,942: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-10-23 09:38:10,943: INFO: common: created directory at: artifacts]
+[2024-10-23 09:38:10,943: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-10-23 09:38:30,623: INFO: data_ingestion: artifacts/data_ingestion/data.zip download! with following info: 
+x-amz-id-2: gc7Ro3aI6D43zNFekI9AR6cJLLWCw9UQOxL8ardnMT28gTzT54pXdLd8eEGB9IFlRt8jhblapgf8U2a2CzT99uk78PVr3rEehp9RRrQjvh0=
+x-amz-request-id: BD4QZW6NGF4E7N4Q
+Date: Wed, 23 Oct 2024 12:38:13 GMT
+Last-Modified: Mon, 21 Oct 2024 22:41:23 GMT
+ETag: "0cdf13bd9b106fa7494e43fe5e67d001-17"
+x-amz-server-side-encryption: AES256
+x-amz-version-id: wFtKV97gLlGnnewk9Fhh34Vea2MfvodM
+Content-Disposition: inline
+Accept-Ranges: bytes
+Content-Type: application/zip
+Server: AmazonS3
+Content-Length: 279330765
+Connection: close
+
+]
+[2024-10-23 09:38:38,286: INFO: data_ingestion: Extracted artifacts/data_ingestion/data.zip to artifacts/data_ingestion]
+[2024-10-23 09:38:38,286: INFO: stage_01_data_ingestion: Data Ingestion Stage completed successfully.]
+[2024-10-23 09:40:37,519: INFO: stage_01_2_data_sorting: Stage Data Sorting and Transfer started]
+[2024-10-23 09:40:37,524: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-10-23 09:40:37,526: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-10-23 09:40:37,526: INFO: common: created directory at: artifacts]
+[2024-10-23 09:40:37,527: INFO: common: created directory at: artifacts\data_sorting]
+[2024-10-23 09:40:37,527: INFO: common: created directory at: artifacts\data_sorting\sorted_images]
+[2024-10-23 09:42:17,972: INFO: stage_01_2_data_sorting: Stage Data Sorting and Transfer completed]
+[2024-10-23 09:42:22,796: INFO: stage_02_prepare_base_model: Prepare Base Model started.]
+[2024-10-23 09:42:22,800: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-10-23 09:42:22,803: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-10-23 09:42:22,803: INFO: common: created directory at: artifacts]
+[2024-10-23 09:42:22,803: INFO: common: created directory at: artifacts/prepare_base_model]
+[2024-10-23 09:42:23,494: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2024-10-23 09:42:23,753: INFO: stage_02_prepare_base_model: Prepare Base Model completed successfully.]
+[2024-10-23 09:43:23,214: INFO: stage_03_training: Stage Training started]
+[2024-10-23 09:43:23,219: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-10-23 09:43:23,220: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-10-23 09:43:23,222: INFO: common: created directory at: artifacts]
+[2024-10-23 09:43:23,222: INFO: common: created directory at: artifacts\prepare_callbacks\checkpoint_dir]
+[2024-10-23 09:43:23,222: INFO: common: created directory at: artifacts\prepare_callbacks\tensorboard_log_dir]
+[2024-10-23 09:43:23,224: INFO: common: created directory at: artifacts\training]
+[2024-10-23 12:56:48,304: INFO: stage_03_training: Stage Training completed]
+[2024-10-23 12:57:02,096: INFO: stage_04_evaluation: *******************]
+[2024-10-23 12:57:02,096: INFO: stage_04_evaluation: >>>>>> stage Evaluation Stage started <<<<<<]
+[2024-10-23 12:57:02,101: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-10-23 12:57:02,102: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-10-23 12:57:02,103: INFO: common: created directory at: artifacts]
+[2024-10-23 13:03:23,100: INFO: common: json file saved at: scores.json]
+[2024-10-23 13:03:23,100: INFO: stage_04_evaluation: >>>>>> stage Evaluation Stage completed <<<<<<
+
+x==========x]
