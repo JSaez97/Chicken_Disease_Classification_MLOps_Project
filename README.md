@@ -6,8 +6,8 @@
 
 <h2 align="left">Overview</h2>
 
-▶️▫️◽  &nbsp;I'm a passionate Data Scientist, Salesforce Developer and Geologist with over a year of experience in the mining industry and geological consulting.\
-
+▶️  &nbsp;The Chicken Disease Classification MLOps Project is an end-to-end machine learning solution designed to detect and classify various diseases in chickens based on image data. This project leverages modern machine learning techniques, including Convolutional Neural Networks (CNNs), to automate the detection process and provide real-time insights that can help farmers and veterinary professionals monitor the health of poultry populations.\
+◽  &nbsp;The Chicken Disease Classification MLOps Project is an end-to-end machine learning solution designed to detect and classify various diseases in chickens based on image data. This project leverages modern machine learning techniques, including Convolutional Neural Networks (CNNs), to automate the detection process and provide real-time insights that can help farmers and veterinary professionals monitor the health of poultry populations.\
 <img alt="Night Coding" src="./assets/Hand%20Wave.gif" width='40' align="left"/><h2></h2>
 This project consists of creating an ML model to detect and classify chicken diseases.
 
