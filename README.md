@@ -20,6 +20,10 @@ The Chicken Disease Classification MLOps Project is an end-to-end solution that 
 
 The chosen dataset for this project is the [Chicken Disease Image Classification](https://www.kaggle.com/datasets/allandclive/chicken-disease-1).
 
+<h2 align="left">Future Improvements</h2>
+
+▶️  &nbsp; Create a custom web site related to the topic.
+
 <h2 align="left">Project Setup</h2>
 
 Clone the project from the repository
