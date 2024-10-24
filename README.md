@@ -45,7 +45,10 @@ Execute the following command
 ```
 python app.py
 ```
-
+To test the script locally
+```
+Copy one of the addresses and paste it in your web browser, for example: http://x.x.x.x:80
+```
 
 
 
