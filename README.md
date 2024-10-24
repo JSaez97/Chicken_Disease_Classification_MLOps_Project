@@ -5,3 +5,5 @@
 </p>
 
 This project consists of creating an ML model to detect and classify chicken diseases.
+
+<img alt="Night Coding" src="./assets/Hand%20Wave.gif" width='40' align="left"/><h2></h2>
