@@ -11,6 +11,15 @@
 
 
 <img alt="Night Coding" src="./assets/Hand%20Wave.gif" width='40' align="left"/><h2></h2>
+
+<h2 align="left">Key Objectives</h2>
+
+▶️  &nbsp;Disease Detection and Classification: Accurately identify different chicken diseases from images using CNN models.\
+
+▶️  &nbsp;Automation: Automate the process of data ingestion, model training, and deployment through MLOps principles.\
+
+▶️  &nbsp;Cloud Scalability: Deploy the app in a cloud environment (AWS ECS) for easy access, scalability, and reliability.\
+
 This project consists of creating an ML model to detect and classify chicken diseases.
 
 <img alt="Night Coding" src="./assets/Hand%20Wave.gif" width='40' align="left"/><h2></h2>
