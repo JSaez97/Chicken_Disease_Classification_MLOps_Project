@@ -5,6 +5,9 @@
 </p>
 
 <h2 align="left">Overview</h2>
+
+▶️▫️◽  &nbsp;I'm a passionate Data Scientist, Salesforce Developer and Geologist with over a year of experience in the mining industry and geological consulting.\
+
 <img alt="Night Coding" src="./assets/Hand%20Wave.gif" width='40' align="left"/><h2></h2>
 This project consists of creating an ML model to detect and classify chicken diseases.
 
