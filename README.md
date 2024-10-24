@@ -22,7 +22,31 @@ The chosen dataset for this project is the [Chicken Disease Image Classification
 
 <h2 align="left">Project Setup</h2>
 
+Clone the project from the repository
 ```
 git clone https://github.com/JSaez97/Chicken_Disease_Classification_MLOps_Project.git
-
 ```
+Change working directory to the project repository
+```
+cd "D:/example/chicken-disease-mlops"
+```
+Create conda environment
+```
+conda create -n chickenenv python=3.8 -y # Change environment name (in this case "chickenenv") according to your preferences
+```
+```
+conda activate chickenenv
+```
+Install project dependencies
+```
+pip install -r requirements.txt
+```
+Execute the following command
+```
+python app.py
+```
+
+
+
+
+
