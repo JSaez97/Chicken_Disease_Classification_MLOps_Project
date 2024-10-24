@@ -6,7 +6,7 @@
 
 <h2 align="left">Overview</h2>
 
-The Chicken Disease Classification MLOps Project is an end-to-end solution that uses Convolutional Neural Networks (CNNs) to detect and classify chicken diseases from images. It integrates a complete MLOps pipeline with Docker for containerization, AWS for cloud deployment, and GitHub Actions for CI/CD, ensuring automated, scalable, and efficient model deployment with minimal manual intervention. This project could help farmers and veterinarians monitor poultry health in real time.
+The Chicken Disease Classification MLOps Project is an end-to-end solution that uses Convolutional Neural Networks (CNNs) to detect and classify chicken diseases like the Coccidiosis, NCD or Salmonella from images, it also can detect if the chicken is healthy. It integrates a complete MLOps pipeline with Docker for containerization, AWS for cloud deployment, and GitHub Actions for CI/CD, ensuring automated, scalable, and efficient model deployment with minimal manual intervention. This project could help farmers and veterinarians monitor poultry health in real time.
 
 <h2 align="left">Key Objectives</h2>
 
