@@ -16,4 +16,6 @@ The Chicken Disease Classification MLOps Project is an end-to-end solution that 
 
 ▶️  &nbsp;Cloud Scalability: Deploy the app in a cloud environment (AWS ECS) for easy access, scalability, and reliability.
 
-<img alt="Night Coding" src="./assets/Hand%20Wave.gif" width='40' align="left"/><h2></h2>
+<h2 align="left">Datasets</h2>
+
+The chosen dataset for this project is the [Chicken Disease Image Classification](https://www.kaggle.com/datasets/allandclive/chicken-disease-1).
