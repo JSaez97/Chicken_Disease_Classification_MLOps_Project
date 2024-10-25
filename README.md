@@ -55,19 +55,68 @@ Copy one of the addresses and paste it in your web browser, for example: http://
 ```
 <h2 align="left">CICD Deployment on AWS</h2>
 <h3 align="left">Getting Started with AWS Setup</h3>
-i) Login to AWS Console:
 
-&nbsp;• Access your AWS account to configure the necessary services and permissions for deployment.
+1. **Login to AWS Console**:
+   - Access your AWS account to configure the necessary services and permissions for deployment.
 
-ii) Create an IAM User for Deployment:
+2. **Create an IAM User for Deployment**:
+   - Configure the user with the following permissions to access required AWS services:
+     - **EC2 Access**: For managing the virtual machine.
+     - **ECR Access**: For storing Docker images in AWS's Elastic Container Registry.
 
-&nbsp;• Configure the user with the following permissions to access required AWS services:\
-  &nbsp;    • EC2 Access: For managing the virtual machine.\
-  &nbsp;    • ECR Access: For storing Docker images in AWS's Elastic Container Registry.
+3. **Set Up Permissions and Policies**:
+   - Attach the following policies to the IAM user to allow access:
+     - **AmazonEC2ContainerRegistryFullAccess**: Grants full access to ECR.
+     - **AmazonEC2FullAccess**: Grants full control over EC2 resources.
 
-iii) Set Up Permissions and Policies:
+### Deployment Steps
 
-&nbsp;• Attach the following policies to the IAM user to allow access:\
-  &nbsp;    • AmazonEC2ContainerRegistryFullAccess: Grants full access to ECR.\
-  &nbsp;    • AmazonEC2FullAccess: Grants full control over EC2 resources.\
+1. **Create an ECR Repository**:
+   - In AWS ECR, create a repository to store and version your Docker images.
+   - Save the repository URI for later use (e.g., `566373416292.dkr.ecr.us-east-1.amazonaws.com/chicken`).
+
+2. **Build Docker Image of the Source Code**:
+   - Package the application code into a Docker image to prepare it for deployment.
+
+3. **Push Docker Image to ECR**:
+   - Push the built Docker image to your ECR repository to make it accessible for EC2.
+
+4. **Launch EC2 Instance**:
+   - Create an EC2 instance (e.g., Ubuntu) to host the application.
+
+5. **Install Docker on EC2**:
+   - SSH into the EC2 instance and run the following commands to install Docker:
+     ```bash
+     # Optional updates
+     sudo apt-get update -y
+     sudo apt-get upgrade
+
+     # Install Docker
+     curl -fsSL https://get.docker.com -o get-docker.sh
+     sudo sh get-docker.sh
+
+     # Grant Docker permissions to the user
+     sudo usermod -aG docker ubuntu
+     newgrp docker
+     ```
+
+6. **Pull Docker Image from ECR on EC2**:
+   - Use Docker commands on the EC2 instance to pull the image from ECR.
+
+7. **Run Docker Image on EC2**:
+   - Launch the Docker container on the EC2 instance to start your application.
+
+### Configuring GitHub Actions for CI/CD
+
+1. **Configure EC2 as a Self-Hosted Runner**:
+   - Go to your GitHub repository settings and navigate to `Actions > Runners > New self-hosted runner`.
+   - Follow the provided instructions to set up your EC2 instance as a self-hosted runner for GitHub Actions.
+
+2. **Setup GitHub Secrets**:
+   - In your GitHub repository, add the following secrets under `Settings > Secrets`:
+     - `AWS_ACCESS_KEY_ID`
+     - `AWS_SECRET_ACCESS_KEY`
+     - `AWS_REGION` (e.g., `us-east-1`)
+     - `AWS_ECR_LOGIN_URI` (e.g., `566373416292.dkr.ecr.us-east-1.amazonaws.com`)
+     - `ECR_REPOSITORY_NAME` (e.g., `chicken`)
 
