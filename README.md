@@ -67,7 +67,7 @@ ii) Create an IAM User for Deployment:
 
 iii) Set Up Permissions and Policies:
 
-• Attach the following policies to the IAM user to allow access:
+&nbsp;• Attach the following policies to the IAM user to allow access:\
   &nbsp;  • AmazonEC2ContainerRegistryFullAccess: Grants full access to ECR.\
   &nbsp;  • AmazonEC2FullAccess: Grants full control over EC2 resources.\
 
