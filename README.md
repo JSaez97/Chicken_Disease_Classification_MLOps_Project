@@ -62,12 +62,12 @@ i) Login to AWS Console:
 ii) Create an IAM User for Deployment:
 
 &nbsp;• Configure the user with the following permissions to access required AWS services:\
-  &nbsp;• EC2 Access: For managing the virtual machine.\
-  &nbsp;• ECR Access: For storing Docker images in AWS's Elastic Container Registry.
+  &nbsp;  • EC2 Access: For managing the virtual machine.\
+  &nbsp;  • ECR Access: For storing Docker images in AWS's Elastic Container Registry.
 
 iii) Set Up Permissions and Policies:
 
 • Attach the following policies to the IAM user to allow access:
-  &nbsp;• AmazonEC2ContainerRegistryFullAccess: Grants full access to ECR.\
-  &nbsp;• AmazonEC2FullAccess: Grants full control over EC2 resources.
+  &nbsp;  • AmazonEC2ContainerRegistryFullAccess: Grants full access to ECR.\
+  &nbsp;  • AmazonEC2FullAccess: Grants full control over EC2 resources.\
 
