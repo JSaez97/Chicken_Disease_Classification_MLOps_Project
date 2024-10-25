@@ -53,9 +53,6 @@ To test the script locally
 ```
 Copy one of the addresses and paste it in your web browser, for example: http://x.x.x.x:80
 ```
-<p align="center">
-  <img src="https://github.com/JSaez97/JSaez97/blob/Projects/ejemplo1.png" alt="Javier_Saez_Banner">
-</p>
 
 
 
