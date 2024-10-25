@@ -53,6 +53,21 @@ To test the script locally
 ```
 Copy one of the addresses and paste it in your web browser, for example: http://x.x.x.x:80
 ```
+<h2 align="left">CICD Deployment on AWS</h2>
+<h3 align="left">Getting Started with AWS Setup</h3>
+i) Login to AWS Console:
 
+• Access your AWS account to configure the necessary services and permissions for deployment.
 
+ii) Create an IAM User for Deployment:
+
+• Configure the user with the following permissions to access required AWS services:
+  • EC2 Access: For managing the virtual machine.
+  • ECR Access: For storing Docker images in AWS's Elastic Container Registry.
+
+iii) Set Up Permissions and Policies:
+
+• Attach the following policies to the IAM user to allow access:
+  • AmazonEC2ContainerRegistryFullAccess: Grants full access to ECR.
+  • AmazonEC2FullAccess: Grants full control over EC2 resources.
 
